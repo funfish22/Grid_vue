@@ -1,0 +1,520 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+	font-family: Roboto,sans-serif;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+*,*:before,*:after{
+	box-sizing: border-box;
+}
+img{
+	max-width: 100%;
+	height: auto ;
+}
+
+.wrap{
+	width: 960px;
+	margin: 32px auto;
+	display: grid;
+	grid-template-columns: repeat(8, 1fr);
+	grid-template-rows: repeat(20, 100px);
+}
+
+.header{
+	grid-area: 1 / 3 /span 1 / span 4;
+	grid-template-columns: repeat(4,1fr);
+    grid-template-rows: 27px 1fr;
+    display: grid;
+}
+
+.header > .title{
+	display: grid;
+	grid-column: 2;
+    transform: translateX(50%);
+	justify-content: center;
+	align-items: center;
+	font-size: 20px;
+	color: #FFFFFF;
+	background-color: #000;
+}
+
+.logo{
+	display: grid;
+	grid-area: 2/1/3/5;
+	font-size: 72px;
+	color: #000000;
+	text-align: center;
+	font-weight: bold;
+}
+
+.item{
+	display: grid;
+}
+
+.item .title{
+	font-size: 48px;
+	color: #000000;
+	line-height: 48px;
+	font-weight: 600;
+}
+
+.item .img{
+	display: grid;
+	background-size: cover;
+	background-position: 50%;
+	cursor: pointer;
+}
+
+.item .num,.top{
+	font-size: 48px;
+	font-weight: 600;
+}
+
+.item1{
+	grid-area: 3/1/8/6;
+	grid: repeat(5,1fr)/repeat(5,1fr);
+}
+
+.item1 .img{
+	grid-area: 1/1/5/5;
+}
+
+.item1 .num{
+	grid-area: 5/1;
+}
+
+.item1 .unit{
+	grid-area: 4/1/5/3;
+    transform: translate(25%,50%);
+}
+
+.item1 .title{
+	grid-area: 1/1/1/4;
+    white-space: nowrap;
+	position: relative;
+	transform: translateY(-12px);
+}
+
+.item1 .subtitle{
+	grid-area: 4/4/5/6;
+    transform: translate(-10%,70%) rotate(90deg);
+}
+
+.item1 .s-border{
+	grid-area: 1/3/3/5;
+    transform: translate(25%,-25%);
+}
+
+.item2{
+	grid-area: 3/6/7/9;
+	grid: repeat(4,1fr)/repeat(3,1fr);
+}
+
+.item2 .img{
+	grid-area:2/1/4/3;
+}
+
+.item2 .s-border{
+	grid-area: 1/2/3/4;
+}
+
+.item2 .title{
+	grid-area: 4/2/5/4;
+	position: relative;
+	transform: translateY(50%);
+	margin-bottom: 50px;
+}
+
+.item2 .subtitle{
+	grid-area: 1/1/2/3;
+	display: grid;
+	align-items: flex-end;
+	transform: translateX(-5%);
+}
+
+.item2 .box{
+	grid-area: 1/1/3/3;
+	transform: translate(25%,25%);
+}
+
+.item2 .num{
+	grid-area: 1/3/2/4;
+	text-align: right;
+}
+
+.item3{
+	grid-area: 8/1/12/6;
+	grid: repeat(4,1fr)/repeat(5,1fr);
+}
+
+.item3 .title{
+	grid-area: 1/2/2/5;
+	position: relative;
+	text-align: right;
+	transform: translateY(50%);
+}
+
+.item3 .subtitle{
+	grid-area: 4/1/5/3;
+    text-align: right;
+}
+
+.item3 .img{
+	grid-area: 2/1/4/5;
+}
+
+.item3 .box{
+	grid-area: 1/1/2/3;
+	transform: translateY(50%);
+}
+
+.item3 .num{
+	grid-area: 4/5/5/6;
+}
+
+.item3 .s-border{
+	grid-area: 3/3/5/5;
+	transform: translate(25%,-25%);
+}
+
+.item4{
+	grid-area: 7/6/13/9;
+	grid: repeat(6,1fr)/repeat(3,1fr);
+}
+
+.item4 .title{
+	grid-area: 1/1/2/3;
+	position: relative;
+	transform: translateY(175%) rotate(-90deg);
+}
+
+.item4 .subtitle{
+	grid-area: 1/1/2/3;
+    transform: translate(60%,130%) rotate(90deg);
+}
+
+.item4 .unit{
+	grid-area: 6/2/7/4;
+    transform: translateY(50%);
+}
+
+.item4 .img{
+	grid-area: 3/2/7/4;
+}
+
+.item4 .s-border{
+	grid-area: 2/1/4/3;
+	transform: translateX(25%)
+}
+
+.item4 .num{
+	grid-area: 6/1/7/2;
+	text-align: right;
+	display: grid;
+	align-items: flex-end;
+}
+
+.item5{
+	grid-area: 13/1/15/7;
+	grid: repeat(2,1fr)/repeat(6,1fr);
+}
+
+.item5 .subtitle{
+	grid-area: 1/5/2/7;
+}
+
+.item5 .img{
+	grid-area: 1/3/3/5;
+	transform: scaleX(-1);
+}
+
+.item5 .num{
+	grid-area: 2/2/3/3;
+	display: grid;
+	align-items: flex-end;
+}
+
+.item5 .s-border{
+	grid-area: 2/2/3/4;
+	transform: translateY(50px);
+}
+
+.item5 .title{
+	grid-area: 1/1/2/4;
+	position: relative;
+	transform: translateY(55%);
+	z-index: 3;
+}
+
+.item5 .unit{
+    grid-area: 1/1/2/3;
+    transform: translate(50%,-25%);
+}
+
+.item6{
+	grid-area: 14/4/20/9;
+	grid: repeat(6,1fr)/repeat(5,1fr);
+}
+
+.item6 .title{
+	grid-area: 1/3/2/6;
+	transform: translateY(50%);
+	position: relative;
+}
+
+.item6 .subtitle{
+	grid-area: 6/3/7/5;
+	transform: translateX(25%);
+}
+
+.item6 .img{
+	grid-area: 2/2/6/6;
+}
+
+.item6 .num{
+	grid-area: 3/1/4/2;
+	display: grid;
+	align-items: flex-end;
+	text-align: right;
+}
+
+.item6 .box{
+	grid-area: 4/1/6/2;
+	transform: translateX(50%)
+}
+
+.item6 .s-border{
+	grid-area: 6/2/7/6;
+	transform: translateY(-50%);
+}
+
+.item7{
+	grid-area: 16/1/21/4;
+	grid: repeat(5,1fr)/repeat(3,1fr);
+}
+
+.item7 .title{
+	grid-area: 2/1/2/3;
+	transform: translate(50%,67.5%) rotate(90deg);
+	position: relative;
+}
+
+.item7 .subtitle{
+	grid-area: 1/1/2/3;
+	display: grid;
+	align-items: flex-end;
+}
+
+.item7 .box{
+	grid-area: 4/3/6/4;
+}
+
+.item7 .s-border{
+	grid-area: 1/1/4/3;
+	transform: translate(25%,18%);
+}
+
+.item7 .num{
+	grid-area: 5/3/6/4;
+	display: grid;
+	text-align: right;
+	align-items: flex-end;
+}
+
+.item7 .img{
+	grid-area: 2/1/6/3;
+}
+
+.item .title:after, .item .title:before {
+    content: attr(text);
+    position: absolute;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+}
+
+.item .title:before {
+    top: -16px;
+    color: rgba(0,0,0,.3);
+	height: 22px;
+}
+
+.item .title:after {
+    color: rgba(0,0,0,.1);
+    top: -25px;
+    height: 15px;
+}
+
+.item .s-border{
+	border: 20px solid #50e3c2;
+    z-index: -1;
+}
+
+.item .box{
+	background-color: #50e3c2;
+	z-index: -1;
+}
+
+.item .subtitle{
+	font-size: 24px;
+	font-style: italic;
+}
+
+.item .unit{
+	z-index: 2;
+	background-image: url(https://hexschool.github.io/THE_F2E_Design/week4-product%20gallery/assets/pattern%20unit.svg)
+}
+
+
+/* page */
+
+.arrow{
+	grid-area: 1/1;
+	display: grid;
+	align-items: center;
+	text-align: right;
+	text-decoration: none;
+	margin-right: 8px;
+	color: #000;
+}
+
+.lothes{
+	grid-area: 1/2/2/4;
+}
+
+.lothes>p{
+	display: grid;
+	width: 131px;
+	height: 27px;
+	line-height: 27px;
+	background-color: #000;
+	color: #fff;
+	text-align: center;
+	transform: translateY(135%);
+}
+
+.page .box1{
+	grid-area: 1/1/3/3;
+	transform: translate(25%,75%);
+}
+
+.page .bigimg{
+	grid-area: 3/2/7/8;
+}
+
+.page .s-border1{
+	grid-area: 5/4/7/8;
+	transform: translate(12.5%,25%)
+}
+
+.page .num{
+	grid-area: 6/2/7/3;
+	transform: translate(-50%,-10%) rotate(-90deg);
+}
+
+.page .top{
+	display: grid;
+	grid-area: 7/2/8/3;
+	text-align: right;
+	transform: rotate(180deg);
+	align-items: flex-end;
+}
+
+.page .title-1-1{
+	display: grid;
+	grid-area: 2/6/3/8;
+	text-align: right;
+	align-items: flex-end;
+}
+
+.page .title-1-2{
+	display: grid;
+	grid-area: 3/7/4/9;
+	text-align: right;
+	align-items: flex-end;
+	transform: translate(20%,-20%) rotate(90deg);
+}
+
+.page .title-1{
+	grid-area: 9/3/10/7;
+}
+
+.page .title-subtitle{
+	font-style: normal;
+}
+
+.page .page-subtitle{
+	grid-area: 10/1/11/3;
+	transform: translate(-10%,70%) rotate(90deg);
+}
+
+.page .text{
+	grid-area: 10/3/13/8;
+	font-size: 16px;
+	line-height: 24px;
+	font-weight: normal;
+	font-family: Roboto-Regular;
+}
+
+.page .img2{
+	grid-area: 14/2/17/5;
+	z-index: 2;
+}
+
+.page .img3{
+	grid-area: 16/4/20/8;
+}
+
+.page .box2{
+	grid-area: 15/6/17/8;
+	transform: translateX(25%);
+}
+
+.page .s-border2{
+	grid-area: 15/1/17/5;
+	transform: translate(12.5%,25%);
+}
+
+.page .unit{
+	grid-area: 19/2/20/4;
+	transform: translate(25%,25%);
+}

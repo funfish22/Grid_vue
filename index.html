@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Grid_vue</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:700i,900" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+	<div id="app">
+		<div class="wrap" v-if="!page">
+			<div class="header">
+				<div class="title">CCCLOTHES</div>
+				<div class="logo">MEN’S TOPS</div>
+			</div>
+			<div class="item item1">
+				<h2 class="title" text="LINEN BLAZER">LINEN BLAZER</h2>
+				<div class="subtitle">Men’s outfit</div>
+				<div class="unit"></div>
+				<div class="s-border"></div>
+				<div class="img" @click="toPage" @click.prevent="tags = '01'" :style="{backgroundImage: 'url(' + content[0].backgroundImage + ')'}"></div>
+				<div class="num">{{content[0].num}}</div>
+			</div>
+			<div class="item item2">
+				<div class="title" text="FREELIFT">FREELIFT</div>
+				<div class="subtitle">Men’s basics</div>
+				<div class="s-border"></div>
+				<div class="box"></div>
+				<div class="img" @click="toPage" @click.prevent="tags = '02'" :style="{backgroundImage: 'url(' + content[1].backgroundImage + ')'}"></div>
+				<div class="num">{{content[1].num}}</div>
+			</div>
+			<div class="item item3">
+				<div class="title" text="SUPER SKINNY">SUPER SKINNY</div>
+				<div class="subtitle">Men’s pattern shirts</div>
+				<div class="s-border"></div>
+				<div class="box"></div>
+				<div class="num">{{content[2].num}}</div>
+				<div class="img" @click="toPage" @click.prevent="tags = '03'" :style="{backgroundImage: 'url(' + content[2].backgroundImage + ')'}"></div>
+			</div>
+			<div class="item item4">
+				<div class="title" text="DENIM">DENIM</div>
+				<div class="subtitle">Men’s cadual</div>
+				<div class="unit"></div>
+				<div class="s-border"></div>
+				<div class="num">{{content[3].num}}</div>
+				<div class="img" @click="toPage" @click.prevent="tags = '04'" :style="{backgroundImage: 'url(' + content[3].backgroundImage + ')'}"></div>
+			</div>
+			<div class="item item5">
+				<div class="title" text="SWEATSHIRTS">SWEATSHIRTS</div>
+				<div class="subtitle">Men’s jacket</div>
+				<div class="unit"></div>
+				<div class="s-border"></div>
+				<div class="num">{{content[4].num}}</div>
+				<div class="img" @click="toPage" @click.prevent="tags = '05'" :style="{backgroundImage: 'url(' + content[4].backgroundImage + ')'}"></div>
+			</div>
+			<div class="item item6">
+				<div class="title" text="VINTAGE DENIM">VINTAGE DENIM</div>
+				<div class="subtitle">Men’s classic</div>
+				<div class="num">{{content[5].num}}</div>
+				<div class="box"></div>
+				<div class="s-border"></div>
+				<div class="img" @click="toPage" @click.prevent="tags = '06'" :style="{backgroundImage: 'url(' + content[5].backgroundImage + ')'}"></div>
+			</div>
+			<div class="item item7">
+				<div class="title" text="EDITION">EDITION</div>
+				<div class="subtitle">Men’s shirts</div>
+				<div class="num">{{content[6].num}}</div>
+				<div class="box"></div>
+				<div class="s-border"></div>
+				<div class="img" @click="toPage" @click.prevent="tags = '07'" :style="{backgroundImage: 'url(' + content[6].backgroundImage + ')'}"></div>
+			</div>			
+		</div>
+		<div class="wrap item page" v-if="page" v-for="(item,index) in filter">
+				<a class="arrow" href="#" @click.prevent="toHome"><i class="fas fa-arrow-left fa-2x"></i></a>
+				<div class="lothes">
+					<p>CCCLOTHES</p>
+				</div>
+				<div class="box box1"></div>
+				<div class="box box2"></div>
+				<div class="s-border s-border1"></div>
+				<div class="s-border s-border2"></div>
+				<div class="num">{{item.num}}</div>
+				<div class="top">TOP</div>
+				<div class="title title-1-1">{{item.title_1}}</div>
+				<div class="title title-1-2">{{item.title_2}}</div>
+				<div class="img bigimg" :style="{backgroundImage: 'url(' + item.backgroundImage + ')'}"></div>
+				<div class="title title-1">
+					<h1>{{item.title_1 + ' ' + item.title_2}}</h1>
+					<div class="subtitle title-subtitle">Kogi Cosby sweater ethical squid irony</div>
+				</div>
+				<div class="subtitle page-subtitle">PRODUCT DETAILS</div>
+				<p class="text">In the tumultuous business of cutting-in and attending to a whale, there is much running backwards and forwards among the crew. Now hands are wanted here, and then again hands are wanted there. There is no staying in any one place; for at one and the same time everything has to be done everywhere. It is much the same with him who endeavors the description of the scene. 
+					<br>
+					<br>
+					We must now retrace our way a little. It was mentioned that upon first breaking ground in the whale's back, the blubber-hook was inserted into the original hole there cut by the spades of the mates. But how did so clumsy and weighty a mass as that same hook get fixed in that hole? It was inserted there by my particular friend Queequeg, whose duty it was, as harpooneer.</p>
+				<div class="img img2" :style="{backgroundImage: 'url(' + item.backgroundImage2 + ')'}"></div>
+				<div class="img img3" :style="{backgroundImage: 'url(' + item.backgroundImage3 + ')'}"></div>
+				<div class="unit"></div>
+			</div>
+	</div>
+	
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script src="js/all.js"></script>
+</body>
+</html>
