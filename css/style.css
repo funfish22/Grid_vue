@@ -461,7 +461,7 @@ img{
 
 .page .title-1-1{
 	display: grid;
-	grid-area: 2/6/3/8;
+	grid-area: 2/5/3/8;
 	text-align: right;
 	align-items: flex-end;
 }
@@ -469,9 +469,9 @@ img{
 .page .title-1-2{
 	display: grid;
 	grid-area: 3/7/4/9;
-	text-align: right;
-	align-items: flex-end;
-	transform: translate(20%,-20%) rotate(90deg);
+	text-align: left;
+    align-items: flex-end;
+    transform: translate(20%,75%) rotate(90deg);
 }
 
 .page .title-1{
