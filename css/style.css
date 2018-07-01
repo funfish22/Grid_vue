@@ -88,6 +88,19 @@ img{
 
 .item{
 	display: grid;
+	cursor: pointer;
+}
+
+.item:hover .title{
+	color: #50e3c2;
+}
+
+.item:hover .s-border{
+	border-color: #1cb18f;
+}
+
+.item:hover .box{
+	background-color: #1cb18f;
 }
 
 .item .title{
@@ -101,7 +114,6 @@ img{
 	display: grid;
 	background-size: cover;
 	background-position: 50%;
-	cursor: pointer;
 }
 
 .item .num,.top{
@@ -415,6 +427,10 @@ img{
 	text-decoration: none;
 	margin-right: 8px;
 	color: #000;
+}
+
+.arrow:hover{
+	color: #50e3c2;
 }
 
 .lothes{

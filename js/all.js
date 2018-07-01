@@ -65,10 +65,10 @@ var app = new Vue({
     methods: {
         //利用page true false顯示所屬頁面
         toPage(item){
-            console.log(item);
             this.page = true;
-            window.document.body.scrollTop = 0;
-            window.document.documentElement.scrollTop = 0;
+            $('html,body').animate({
+                scrollTop: 0
+            }, 500);
         },
         toHome(){
             this.page = false
