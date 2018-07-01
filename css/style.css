@@ -108,17 +108,23 @@ img{
 	color: #000000;
 	line-height: 48px;
 	font-weight: 600;
+	position: relative;
+	z-index: 4;
 }
 
 .item .img{
 	display: grid;
 	background-size: cover;
 	background-position: 50%;
+	position: relative;
+	z-index: 2;
 }
 
 .item .num,.top{
 	font-size: 48px;
 	font-weight: 600;
+	position: relative;
+	z-index: 2;
 }
 
 .item1{
@@ -294,7 +300,6 @@ img{
 	grid-area: 1/1/2/4;
 	position: relative;
 	transform: translateY(55%);
-	z-index: 3;
 }
 
 .item5 .unit{
@@ -311,6 +316,7 @@ img{
 	grid-area: 1/3/2/6;
 	transform: translateY(50%);
 	position: relative;
+	white-space: nowrap;
 }
 
 .item6 .subtitle{
@@ -409,11 +415,14 @@ img{
 .item .subtitle{
 	font-size: 24px;
 	font-style: italic;
+	position: relative;
+	z-index: 4;
 }
 
 .item .unit{
-	z-index: 2;
-	background-image: url(https://hexschool.github.io/THE_F2E_Design/week4-product%20gallery/assets/pattern%20unit.svg)
+	position: relative;
+	z-index: 3;
+	background: repeating-linear-gradient(135deg, #50E3C2 0px, #50E3C2 20px, transparent 20px, transparent 40px);
 }
 
 
